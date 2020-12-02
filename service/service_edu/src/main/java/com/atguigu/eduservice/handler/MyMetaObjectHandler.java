@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-/**
+/** 自动填充 配置类
  * @author bing  @create 2020/12/2-6:06 下午
  */
 @Component

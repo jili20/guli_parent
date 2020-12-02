@@ -11,4 +11,10 @@
 
     <artifactId>service_edu</artifactId>
 
+    <dependencies>
+
+
+    </dependencies>
+
+
 </project>

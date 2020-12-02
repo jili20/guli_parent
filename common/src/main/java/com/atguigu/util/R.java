@@ -1,4 +1,4 @@
-package com.atguigu.commonutils;
+package com.atguigu.util;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /** 统一返回结果类
- * @author bing  @create 2020/12/2-3:23 下午
+ * @author bing  @create 2020/12/2-8:34 下午
  */
 @Data
 public class R {
@@ -70,4 +70,3 @@ public class R {
         return this;
     }
 }
-
