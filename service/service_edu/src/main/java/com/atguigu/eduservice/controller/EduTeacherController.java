@@ -2,6 +2,7 @@ package com.atguigu.eduservice.controller;
 
 import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.entity.vo.TeacherQuery;
+import com.atguigu.eduservice.exception.GuliException;
 import com.atguigu.eduservice.service.EduTeacherService;
 import com.atguigu.util.R;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -64,7 +65,13 @@ public class EduTeacherController {
                              @PathVariable long limit) {
         //创建page对象
         Page<EduTeacher> pageTeacher = new Page<>(current, limit);
-         int i = 10/0;
+
+        try {
+            int i = 10/0;
+        } catch (Exception e) {
+            throw new GuliException(2001,"执行了自定义异常处理");
+        }
+
         //调用方法实现分页
         //调用方法时候，底层封装，把分页所有数据封装到pageTeacher对象里面
         teacherService.page(pageTeacher, null);
@@ -72,7 +79,6 @@ public class EduTeacherController {
         List<EduTeacher> records = pageTeacher.getRecords(); //数据list集合
         return R.ok().data("total", total).data("rows", records);
     }
-
 
     // 多条件 分页 查询
     //4 条件查询带分页的方法
