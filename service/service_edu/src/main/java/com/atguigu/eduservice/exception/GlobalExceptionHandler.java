@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/** 全局异常处理
+/**
+ * 全局异常处理
+ *
  * @author bing  @create 2020/12/2-8:41 下午
  */
 @Slf4j
@@ -34,7 +36,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(GuliException.class)
     @ResponseBody //为了返回数据
     public R error(GuliException e) {
-        log.error(e.getMessage());
+        log.error(e.getMessage()); // 把异常写到本地日志文件
+        log.error(ExceptionUtil.getMessage(e)); // 调用详细异常信息工具类
         e.printStackTrace();
 
         return R.error().code(e.getCode()).message(e.getMsg());

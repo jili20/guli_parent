@@ -2,9 +2,9 @@ package com.atguigu.eduservice.controller;
 
 import com.atguigu.eduservice.entity.EduTeacher;
 import com.atguigu.eduservice.entity.vo.TeacherQuery;
-import com.atguigu.eduservice.exception.GuliException;
 import com.atguigu.eduservice.service.EduTeacherService;
 import com.atguigu.util.R;
+import org.springframework.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
@@ -12,7 +12,6 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,7 +25,9 @@ import java.util.List;
  * @since 2020-12-02
  */
 @Api(tags = "讲师管理")
+//@Api(description="讲师管理")
 @Controller
+@CrossOrigin  //解决跨域
 @RestController
 @RequestMapping("/eduservice/teacher")
 public class EduTeacherController {
@@ -51,7 +52,6 @@ public class EduTeacherController {
         boolean flag = teacherService.removeById(id);
         if (flag) {
             return R.ok();
-
         } else {
             return R.error();
         }
@@ -66,11 +66,11 @@ public class EduTeacherController {
         //创建page对象
         Page<EduTeacher> pageTeacher = new Page<>(current, limit);
 
-        try {
-            int i = 10/0;
-        } catch (Exception e) {
-            throw new GuliException(2001,"执行了自定义异常处理");
-        }
+//        try {
+//            int i = 10/0;
+//        } catch (Exception e) {
+//            throw new GuliException(2001,"执行了自定义异常处理");
+//        }
 
         //调用方法实现分页
         //调用方法时候，底层封装，把分页所有数据封装到pageTeacher对象里面
@@ -114,6 +114,7 @@ public class EduTeacherController {
             wrapper.le("gmt_create", end);
         }
 
+        wrapper.orderByDesc("gmt_create");
         //调用方法实现条件查询分页
         teacherService.page(pageTeacher, wrapper);
 
