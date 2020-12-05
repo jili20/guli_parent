@@ -11,7 +11,7 @@ import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import org.junit.Test;
 
-/**
+/** 代码生成器
  * @author bing  @create 2020/12/2-11:56 上午
  */
 public class CodeGenerator {
@@ -30,7 +30,7 @@ public class CodeGenerator {
         autoGenerator.setDataSource(dataSourceConfig);
         // 全局配置
         GlobalConfig globalConfig = new GlobalConfig();
-        globalConfig.setOutputDir("/Users/bing/Code/idea/guli_parent/service/service_edu" + "/src/main/java");
+        globalConfig.setOutputDir("/Users/bing/Code/idea/guli/guli_parent/service/service_edu" + "/src/main/java");
         // globalConfig.setOutputDir(System.getProperty("user.dir")+"/src/main/java");//指定代码生成存放位置
         globalConfig.setOpen(false); // 创建完成不用打开文件夹
         globalConfig.setAuthor("Bing"); // 作者，不写用当前计算机用户名
@@ -52,7 +52,8 @@ public class CodeGenerator {
         autoGenerator.setPackageInfo(packageConfig);
         // 配置策略
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("edu_teacher"); // 表名；生成多张表用 , 隔开
+        // 表 edu_teacher ，edu_subject
+        strategyConfig.setInclude("edu_subject"); // 表名；生成多张表用 , 隔开
         // strategyConfig.setInclude("user","product"); // 生成多张表格式
         strategyConfig.setEntityLombokModel(true); // 自动添加 Lombok 注解
         strategyConfig.setNaming(NamingStrategy.underline_to_camel); // 表字段下划线转驼峰

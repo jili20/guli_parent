@@ -11,19 +11,17 @@
 
     <artifactId>service-oss</artifactId>
 
-<dependencies>
-    <!-- 阿里云对象存储 -->
-    <dependency>
-        <groupId>com.aliyun.oss</groupId>
-        <artifactId>aliyun-sdk-oss</artifactId>
-    </dependency>
+    <dependencies>
+        <!-- 阿里云对象存储 -->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+        </dependency>
 
-    <!-- 日期工具栏依赖 -->
-    <dependency>
-        <groupId>joda-time</groupId>
-        <artifactId>joda-time</artifactId>
-    </dependency>
-
-
-</dependencies>
+        <!-- 日期工具栏依赖 -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+    </dependencies>
 </project>
