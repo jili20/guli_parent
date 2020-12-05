@@ -52,8 +52,8 @@ public class CodeGenerator {
         autoGenerator.setPackageInfo(packageConfig);
         // 配置策略
         StrategyConfig strategyConfig = new StrategyConfig();
-        // 表 edu_teacher ，edu_subject
-        strategyConfig.setInclude("edu_subject"); // 表名；生成多张表用 , 隔开
+        // 表 edu_teacher ，edu_subject，
+        strategyConfig.setInclude("edu_course","edu_course_description","edu_chapter","edu_video"); // 表名；生成多张表用 , 隔开
         // strategyConfig.setInclude("user","product"); // 生成多张表格式
         strategyConfig.setEntityLombokModel(true); // 自动添加 Lombok 注解
         strategyConfig.setNaming(NamingStrategy.underline_to_camel); // 表字段下划线转驼峰
