@@ -30,4 +30,19 @@ public class EduCourseController {
         return R.ok().data("courseId", id);
         // http://localhost:8001/swagger-ui.html#!/edu45course45controller/addCourseInfoUsingPOST
     }
+
+    //根据课程id查询课程基本信息
+    @GetMapping("getCourseInfo/{courseId}")
+    public R getCourseInfo(@PathVariable String courseId) {
+        CourseInfoVo courseInfoVo = courseService.getCourseInfo(courseId);
+        return R.ok().data("courseInfoVo",courseInfoVo);
+    }
+
+    //修改课程信息
+    @PostMapping("updateCourseInfo")
+    public R updateCourseInfo(@RequestBody CourseInfoVo courseInfoVo) {
+        courseService.updateCourseInfo(courseInfoVo);
+        return R.ok();
+    }
+
 }
