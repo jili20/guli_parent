@@ -25,7 +25,6 @@ import java.util.List;
  * @since 2020-12-02
  */
 @Api(tags = "讲师管理")
-//@Api(description="讲师管理")
 @Controller
 @CrossOrigin  //解决跨域
 @RestController
@@ -82,7 +81,7 @@ public class EduTeacherController {
 
     // 多条件 分页 查询
     //4 条件查询带分页的方法
-    @PostMapping("pageTeacherCondition/{current}/{limit}")
+    @PostMapping("/pageTeacherCondition/{current}/{limit}")
     public R pageTeacherCondition(@PathVariable long current, @PathVariable long limit,
                                   @RequestBody(required = false) TeacherQuery teacherQuery) {
         // @RequestBody 使用json传递数据，把json数据封装到对应对象TeacherQuery里面，提交方式要用  @PostMapping
