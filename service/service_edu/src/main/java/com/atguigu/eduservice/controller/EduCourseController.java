@@ -3,8 +3,12 @@ package com.atguigu.eduservice.controller;
 import com.atguigu.eduservice.entity.EduCourse;
 import com.atguigu.eduservice.entity.vo.CourseInfoVo;
 import com.atguigu.eduservice.entity.vo.CoursePublishVo;
+import com.atguigu.eduservice.entity.vo.courseQuery;
 import com.atguigu.eduservice.service.EduCourseService;
 import com.atguigu.util.R;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,6 +35,45 @@ public class EduCourseController {
     public R getCourseList() {
         List<EduCourse> list = courseService.list(null);
         return R.ok().data("list",list);
+    }
+
+
+    // 多条件查询 带分页 的方法
+    @PostMapping("/pageCourseCondition/{current}/{limit}")
+    public R pageCourseCondition(@PathVariable long current, @PathVariable long limit,
+                                  @RequestBody(required = false) courseQuery courseQuery) {
+        //创建page对象
+        Page<EduCourse> pageTeacher = new Page<>(current, limit);
+
+        //构建条件
+        QueryWrapper<EduCourse> wrapper = new QueryWrapper<>();
+        // 多条件组合查询
+        String title = courseQuery.getTitle();
+        String status = courseQuery.getStatus();
+        String begin = courseQuery.getBegin();
+        String end = courseQuery.getEnd();
+
+        //判断条件值是否为空，如果不为空拼接条件
+        if (!StringUtils.isEmpty(title)) {
+            //构建条件
+            wrapper.like("title", title);
+        }
+        if (!StringUtils.isEmpty(status)) {
+            wrapper.eq("status", status);
+        }
+        if (!StringUtils.isEmpty(begin)) {
+            wrapper.ge("gmt_create", begin);
+        }
+        if (!StringUtils.isEmpty(end)) {
+            wrapper.le("gmt_create", end);
+        }
+        wrapper.orderByDesc("gmt_create");
+        //调用方法实现条件查询分页
+        courseService.page(pageTeacher, wrapper);
+
+        long total = pageTeacher.getTotal();//总记录数
+        List<EduCourse> records = pageTeacher.getRecords(); //数据list集合
+        return R.ok().data("total", total).data("rows", records);
     }
 
     //添加课程基本信息的方法
