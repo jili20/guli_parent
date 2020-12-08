@@ -14,8 +14,8 @@ import java.util.List;
 public class TestVod {
 
     public static void main(String[] args) throws Exception {
-        String accessKeyId = "LTAI4GEaXJ6m9Spb1TGfXjYY";
-        String accessKeySecret = "VTtoHccVGyYop8xjNFLs0fPZc2ccbR";
+        String accessKeyId = "";
+        String accessKeySecret = "";
 
         String title = "6 - What If I Want to Move Faster - upload by sdk";   //上传之后文件名称
         String fileName = "/Users/bing/Movies/guliVideo/6 - What If I Want to Move Faster.mp4";  //本地文件路径和名称
@@ -43,15 +43,15 @@ public class TestVod {
     // 根据视频id获取视频播放凭证
     public static void getPlayAuth() throws Exception {
         // 根据视频id获取视频播放凭证
-        String accessKeyId = "LTAI4GEaXJ6m9Spb1TGfXjYY";
-        String accessKeySecret = "VTtoHccVGyYop8xjNFLs0fPZc2ccbR";
+        String accessKeyId = "";
+        String accessKeySecret = "";
 
         DefaultAcsClient client = InitObject.initVodClient(accessKeyId, accessKeySecret);
 
         GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
         GetVideoPlayAuthResponse response = new GetVideoPlayAuthResponse();
         // 向 request 对象里面设置视频 id
-        request.setVideoId("08a56bf6a52e4ec9b3556e5ecdf54b04");
+        request.setVideoId("");
 
         response = client.getAcsResponse(request);
         System.out.println("playAuth:" + response.getPlayAuth());
@@ -59,8 +59,8 @@ public class TestVod {
 
     // 根据视频id获取视频播放地址
     public static void getPlayUrl() throws Exception {
-        String accessKeyId = "LTAI4GEaXJ6m9Spb1TGfXjYY";
-        String accessKeySecret = "VTtoHccVGyYop8xjNFLs0fPZc2ccbR";
+        String accessKeyId = "";
+        String accessKeySecret = "";
 
         // 1.根据视频 id 获取视频播放地址
         // 创建初始化对象
@@ -71,7 +71,7 @@ public class TestVod {
         GetPlayInfoResponse response = new GetPlayInfoResponse();
 
         // 向 request 对象里面设置视频 id
-        request.setVideoId("08a56bf6a52e4ec9b3556e5ecdf54b04");
+        request.setVideoId("");
 
         // 调用初始化对象里面的方法，传递 request，获取数据
         response = client.getAcsResponse(request);
