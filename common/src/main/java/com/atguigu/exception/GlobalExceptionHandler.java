@@ -1,4 +1,4 @@
-package com.atguigu.eduservice.exception;
+package com.atguigu.exception;
 
 import com.atguigu.util.R;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Slf4j
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
 
     //指定出现什么异常执行这个方法
     @ExceptionHandler(Exception.class)

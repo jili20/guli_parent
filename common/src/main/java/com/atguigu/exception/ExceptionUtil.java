@@ -1,4 +1,4 @@
-package com.atguigu.eduservice.exception;
+package com.atguigu.exception;
 
 /**
  * 异常详细信息工具类
