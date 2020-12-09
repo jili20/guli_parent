@@ -10,7 +10,6 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @EnableDiscoveryClient
 @EnableFeignClients
-//@EnableSwagger2
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.atguigu"})
 public class EduApplication {
