@@ -1,7 +1,7 @@
 package com.atguigu.staservice.controller;
 
+import com.atguigu.commonutils.R;
 import com.atguigu.staservice.service.StatisticsDailyService;
-import com.atguigu.util.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

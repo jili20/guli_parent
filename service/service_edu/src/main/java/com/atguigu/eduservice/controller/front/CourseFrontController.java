@@ -1,5 +1,8 @@
 package com.atguigu.eduservice.controller.front;
 
+import com.atguigu.commonutils.JwtUtils;
+import com.atguigu.commonutils.R;
+import com.atguigu.commonutils.ordervo.CourseWebVoOrder;
 import com.atguigu.eduservice.client.OrdersClient;
 import com.atguigu.eduservice.entity.EduCourse;
 import com.atguigu.eduservice.entity.chapter.ChapterVo;
@@ -7,9 +10,6 @@ import com.atguigu.eduservice.entity.frontvo.CourseFrontVo;
 import com.atguigu.eduservice.entity.frontvo.CourseWebVo;
 import com.atguigu.eduservice.service.EduChapterService;
 import com.atguigu.eduservice.service.EduCourseService;
-import com.atguigu.ordervo.CourseWebVoOrder;
-import com.atguigu.util.JwtUtils;
-import com.atguigu.util.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

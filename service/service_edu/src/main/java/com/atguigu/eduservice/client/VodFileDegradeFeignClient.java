@@ -1,6 +1,6 @@
 package com.atguigu.eduservice.client;
 
-import com.atguigu.util.R;
+import com.atguigu.commonutils.R;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

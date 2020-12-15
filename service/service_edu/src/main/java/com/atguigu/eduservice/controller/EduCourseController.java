@@ -1,11 +1,11 @@
 package com.atguigu.eduservice.controller;
 
+import com.atguigu.commonutils.R;
 import com.atguigu.eduservice.entity.EduCourse;
 import com.atguigu.eduservice.entity.vo.CourseInfoVo;
 import com.atguigu.eduservice.entity.vo.CoursePublishVo;
 import com.atguigu.eduservice.entity.vo.courseQuery;
 import com.atguigu.eduservice.service.EduCourseService;
-import com.atguigu.util.R;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.commons.lang3.StringUtils;

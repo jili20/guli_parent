@@ -1,11 +1,11 @@
 package com.atguigu.educenter.controller;
 
+import com.atguigu.commonutils.JwtUtils;
+import com.atguigu.commonutils.R;
+import com.atguigu.commonutils.ordervo.UcenterMemberOrder;
 import com.atguigu.educenter.entity.UcenterMember;
 import com.atguigu.educenter.entity.vo.RegisterVo;
 import com.atguigu.educenter.service.UcenterMemberService;
-import com.atguigu.ordervo.UcenterMemberOrder;
-import com.atguigu.util.JwtUtils;
-import com.atguigu.util.R;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

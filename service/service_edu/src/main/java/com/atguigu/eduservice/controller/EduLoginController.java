@@ -1,7 +1,10 @@
 package com.atguigu.eduservice.controller;
 
-import com.atguigu.util.R;
-import org.springframework.web.bind.annotation.*;
+import com.atguigu.commonutils.R;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /** 后台管理前端登录 - 解决后台前端VUE框架登录
  * @author bing  @create 2020/12/3-4:13 下午

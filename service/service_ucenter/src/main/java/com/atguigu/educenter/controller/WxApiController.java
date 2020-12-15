@@ -1,16 +1,15 @@
 package com.atguigu.educenter.controller;
 
 
+import com.atguigu.commonutils.JwtUtils;
+import com.atguigu.commonutils.exception.GuliException;
 import com.atguigu.educenter.entity.UcenterMember;
 import com.atguigu.educenter.service.UcenterMemberService;
 import com.atguigu.educenter.utils.ConstantWxUtils;
 import com.atguigu.educenter.utils.HttpClientUtils;
-import com.atguigu.exception.GuliException;
-import com.atguigu.util.JwtUtils;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 

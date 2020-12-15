@@ -1,9 +1,9 @@
 package com.atguigu.eduorder.controller;
 
+import com.atguigu.commonutils.JwtUtils;
+import com.atguigu.commonutils.R;
 import com.atguigu.eduorder.entity.Order;
 import com.atguigu.eduorder.service.OrderService;
-import com.atguigu.util.JwtUtils;
-import com.atguigu.util.R;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

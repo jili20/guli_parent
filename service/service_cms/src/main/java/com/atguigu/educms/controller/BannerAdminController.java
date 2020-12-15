@@ -1,8 +1,8 @@
 package com.atguigu.educms.controller;
 
+import com.atguigu.commonutils.R;
 import com.atguigu.educms.entity.CrmBanner;
 import com.atguigu.educms.service.CrmBannerService;
-import com.atguigu.util.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

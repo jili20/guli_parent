@@ -1,13 +1,13 @@
 package com.atguigu.staservice.service.impl;
 
+import com.atguigu.commonutils.R;
 import com.atguigu.staservice.client.UcenterClient;
 import com.atguigu.staservice.entity.StatisticsDaily;
 import com.atguigu.staservice.mapper.StatisticsDailyMapper;
 import com.atguigu.staservice.service.StatisticsDailyService;
-import com.atguigu.util.R;
-import org.apache.commons.lang3.RandomUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.apache.commons.lang3.RandomUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,13 +1,13 @@
 package com.atguigu.eduorder.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.atguigu.commonutils.exception.GuliException;
 import com.atguigu.eduorder.entity.Order;
 import com.atguigu.eduorder.entity.PayLog;
 import com.atguigu.eduorder.mapper.PayLogMapper;
 import com.atguigu.eduorder.service.OrderService;
 import com.atguigu.eduorder.service.PayLogService;
 import com.atguigu.eduorder.util.HttpClient;
-import com.atguigu.exception.GuliException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.wxpay.sdk.WXPayUtil;

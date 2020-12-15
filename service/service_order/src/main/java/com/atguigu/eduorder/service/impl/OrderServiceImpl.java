@@ -1,13 +1,13 @@
 package com.atguigu.eduorder.service.impl;
 
+import com.atguigu.commonutils.ordervo.CourseWebVoOrder;
+import com.atguigu.commonutils.ordervo.UcenterMemberOrder;
 import com.atguigu.eduorder.client.EduClient;
 import com.atguigu.eduorder.client.UcenterClient;
 import com.atguigu.eduorder.entity.Order;
 import com.atguigu.eduorder.mapper.OrderMapper;
 import com.atguigu.eduorder.service.OrderService;
 import com.atguigu.eduorder.util.OrderNoUtil;
-import com.atguigu.ordervo.CourseWebVoOrder;
-import com.atguigu.ordervo.UcenterMemberOrder;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

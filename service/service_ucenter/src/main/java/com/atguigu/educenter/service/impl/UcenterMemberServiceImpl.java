@@ -1,12 +1,12 @@
 package com.atguigu.educenter.service.impl;
 
+import com.atguigu.commonutils.JwtUtils;
+import com.atguigu.commonutils.exception.GuliException;
 import com.atguigu.educenter.entity.UcenterMember;
 import com.atguigu.educenter.entity.vo.RegisterVo;
 import com.atguigu.educenter.mapper.UcenterMemberMapper;
 import com.atguigu.educenter.service.UcenterMemberService;
 import com.atguigu.educenter.utils.MD5;
-import com.atguigu.exception.GuliException;
-import com.atguigu.util.JwtUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;

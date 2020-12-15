@@ -1,10 +1,10 @@
 package com.atguigu.eduservice.controller;
 
+import com.atguigu.commonutils.R;
+import com.atguigu.commonutils.exception.GuliException;
 import com.atguigu.eduservice.client.VodClient;
 import com.atguigu.eduservice.entity.EduVideo;
 import com.atguigu.eduservice.service.EduVideoService;
-import com.atguigu.exception.GuliException;
-import com.atguigu.util.R;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -2,10 +2,10 @@ package com.atguigu.eduservice.listener;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
+import com.atguigu.commonutils.exception.GuliException;
 import com.atguigu.eduservice.entity.EduSubject;
 import com.atguigu.eduservice.entity.excel.SubjectData;
 import com.atguigu.eduservice.service.EduSubjectService;
-import com.atguigu.exception.GuliException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 
 /**
