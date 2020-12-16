@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 /** 后台管理前端登录 - 解决后台前端VUE框架登录
  * @author bing  @create 2020/12/3-4:13 下午
  */
+// 改用权限框架登录
 @RestController
 @RequestMapping("/eduservice/user")
 //@CrossOrigin  //解决跨域
